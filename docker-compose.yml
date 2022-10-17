@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python3:
+    build: .
+    container_name: 'python38'
+    working_dir: '/root/app'
+    tty: true
+    volumes:
+      - ./src:/root/app
