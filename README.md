@@ -25,4 +25,4 @@
 ## Note  
   ・データベースの設計はしていません。  
   ・全プレイリストで検証する場合はdatasetのzipをapp/data/rawに格納し、  
-    app/src/preprocessing.pyで中間ファイルをつくる必要がある。   
+    app/src/preprocessing.pyで中間ファイルをつくる必要があります。   
