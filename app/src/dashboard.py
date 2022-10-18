@@ -6,9 +6,6 @@ import plotly.figure_factory as ff
 import plotly.express as px
 import streamlit as st
 
-with open('../data/processed/dict_summary_playlist.json') as f:
-    d_summary_playlist = json.load(f)
-
 st.set_page_config(layout="wide")
 
 # Data
@@ -18,9 +15,8 @@ df_topTrack['top10_track']=df_topTrack['top10_track']+'('+df_topTrack['top10_tra
 df_topAlbum = pd.read_csv('../data/processed/df_top10Album.csv')
 df_topAlbum['top10_album']=df_topAlbum['top10_album']+'('+df_topAlbum['top10_album_artist']+')'
 vars_hist = [var for var in df.columns if var.startswith('num')]
-
-# l_num_durations = d_summary_playlist['num_durations']
-# l_rate_albumsByTracks = d_summary_playlist['rate_albumsByTracks']
+with open('../data/processed/dict_summary_playlist.json') as f:
+    d_summary_playlist = json.load(f)
 
 # Layout Sidebar
 st.sidebar.markdown("## Basic Info: Numbers")
