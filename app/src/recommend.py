@@ -24,7 +24,7 @@ UNIQUE_TRACKS = len(list(set(d_summary_track['names_track'])))
 
 # 今回はArmのバリエーションを固定しています。
 # 本来であればArm Class作って、内部に評価値やふるまいを関数とするのが良いと思います。
-# その他Arm案について：新曲、同性random、同年randomなど
+# その他Arm案について：新曲、性別、年齢ラベルなど
 def Arm1(track):
     """その曲が入っているプレイリスト群の中で最もたくさん出現する曲"""
     print('Arm1 chosen')
@@ -144,5 +144,3 @@ if column3.button("dislike"):
 	index = sellect_e_greedy(Scores)
 	A = Arms[index]
 	track_next = A(track)
-
-
